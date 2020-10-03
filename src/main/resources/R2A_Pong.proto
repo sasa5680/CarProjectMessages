@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+option java_package = "com.sasa5680.ProtoMessages";
+
+message R2A_Pong{
+
+	fixed64 time = 1;
+}

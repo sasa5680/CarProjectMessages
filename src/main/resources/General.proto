@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+option java_package = "com.sasa5680.ProtoMessages";
+
+
+
+message General{
+
+	string MessageType 					  = 1;
+	repeated google.protobuf.Any innerMSG = 2;
+
+}

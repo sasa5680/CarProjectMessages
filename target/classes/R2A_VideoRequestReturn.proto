@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+
+option java_package = "com.sasa5680.ProtoMessages";
+
+message videoRP{
+
+	string url = 1;
+	
+}
