@@ -17,6 +17,26 @@ public final class A2RServoControl {
   public interface A2R_ServoControlOrBuilder extends
       // @@protoc_insertion_point(interface_extends:A2R_ServoControl)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool up = 1;</code>
+     */
+    boolean getUp();
+
+    /**
+     * <code>bool down = 2;</code>
+     */
+    boolean getDown();
+
+    /**
+     * <code>bool left = 3;</code>
+     */
+    boolean getLeft();
+
+    /**
+     * <code>bool right = 4;</code>
+     */
+    boolean getRight();
   }
   /**
    * Protobuf type {@code A2R_ServoControl}
@@ -31,6 +51,10 @@ public final class A2RServoControl {
       super(builder);
     }
     private A2R_ServoControl() {
+      up_ = false;
+      down_ = false;
+      left_ = false;
+      right_ = false;
     }
 
     @java.lang.Override
@@ -46,6 +70,7 @@ public final class A2RServoControl {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
+      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -56,6 +81,26 @@ public final class A2RServoControl {
             case 0:
               done = true;
               break;
+            case 8: {
+
+              up_ = input.readBool();
+              break;
+            }
+            case 16: {
+
+              down_ = input.readBool();
+              break;
+            }
+            case 24: {
+
+              left_ = input.readBool();
+              break;
+            }
+            case 32: {
+
+              right_ = input.readBool();
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -88,6 +133,42 @@ public final class A2RServoControl {
               com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl.class, com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl.Builder.class);
     }
 
+    public static final int UP_FIELD_NUMBER = 1;
+    private boolean up_;
+    /**
+     * <code>bool up = 1;</code>
+     */
+    public boolean getUp() {
+      return up_;
+    }
+
+    public static final int DOWN_FIELD_NUMBER = 2;
+    private boolean down_;
+    /**
+     * <code>bool down = 2;</code>
+     */
+    public boolean getDown() {
+      return down_;
+    }
+
+    public static final int LEFT_FIELD_NUMBER = 3;
+    private boolean left_;
+    /**
+     * <code>bool left = 3;</code>
+     */
+    public boolean getLeft() {
+      return left_;
+    }
+
+    public static final int RIGHT_FIELD_NUMBER = 4;
+    private boolean right_;
+    /**
+     * <code>bool right = 4;</code>
+     */
+    public boolean getRight() {
+      return right_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -102,6 +183,18 @@ public final class A2RServoControl {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (up_ != false) {
+        output.writeBool(1, up_);
+      }
+      if (down_ != false) {
+        output.writeBool(2, down_);
+      }
+      if (left_ != false) {
+        output.writeBool(3, left_);
+      }
+      if (right_ != false) {
+        output.writeBool(4, right_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -111,6 +204,22 @@ public final class A2RServoControl {
       if (size != -1) return size;
 
       size = 0;
+      if (up_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, up_);
+      }
+      if (down_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, down_);
+      }
+      if (left_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, left_);
+      }
+      if (right_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, right_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -127,6 +236,14 @@ public final class A2RServoControl {
       com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl other = (com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl) obj;
 
       boolean result = true;
+      result = result && (getUp()
+          == other.getUp());
+      result = result && (getDown()
+          == other.getDown());
+      result = result && (getLeft()
+          == other.getLeft());
+      result = result && (getRight()
+          == other.getRight());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -138,6 +255,18 @@ public final class A2RServoControl {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + UP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getUp());
+      hash = (37 * hash) + DOWN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getDown());
+      hash = (37 * hash) + LEFT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getLeft());
+      hash = (37 * hash) + RIGHT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getRight());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -271,6 +400,14 @@ public final class A2RServoControl {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        up_ = false;
+
+        down_ = false;
+
+        left_ = false;
+
+        right_ = false;
+
         return this;
       }
 
@@ -297,6 +434,10 @@ public final class A2RServoControl {
       @java.lang.Override
       public com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl buildPartial() {
         com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl result = new com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl(this);
+        result.up_ = up_;
+        result.down_ = down_;
+        result.left_ = left_;
+        result.right_ = right_;
         onBuilt();
         return result;
       }
@@ -345,6 +486,18 @@ public final class A2RServoControl {
 
       public Builder mergeFrom(com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl other) {
         if (other == com.sasa5680.ProtoMessages.A2RServoControl.A2R_ServoControl.getDefaultInstance()) return this;
+        if (other.getUp() != false) {
+          setUp(other.getUp());
+        }
+        if (other.getDown() != false) {
+          setDown(other.getDown());
+        }
+        if (other.getLeft() != false) {
+          setLeft(other.getLeft());
+        }
+        if (other.getRight() != false) {
+          setRight(other.getRight());
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -371,6 +524,110 @@ public final class A2RServoControl {
             mergeFrom(parsedMessage);
           }
         }
+        return this;
+      }
+
+      private boolean up_ ;
+      /**
+       * <code>bool up = 1;</code>
+       */
+      public boolean getUp() {
+        return up_;
+      }
+      /**
+       * <code>bool up = 1;</code>
+       */
+      public Builder setUp(boolean value) {
+        
+        up_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool up = 1;</code>
+       */
+      public Builder clearUp() {
+        
+        up_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean down_ ;
+      /**
+       * <code>bool down = 2;</code>
+       */
+      public boolean getDown() {
+        return down_;
+      }
+      /**
+       * <code>bool down = 2;</code>
+       */
+      public Builder setDown(boolean value) {
+        
+        down_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool down = 2;</code>
+       */
+      public Builder clearDown() {
+        
+        down_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean left_ ;
+      /**
+       * <code>bool left = 3;</code>
+       */
+      public boolean getLeft() {
+        return left_;
+      }
+      /**
+       * <code>bool left = 3;</code>
+       */
+      public Builder setLeft(boolean value) {
+        
+        left_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool left = 3;</code>
+       */
+      public Builder clearLeft() {
+        
+        left_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean right_ ;
+      /**
+       * <code>bool right = 4;</code>
+       */
+      public boolean getRight() {
+        return right_;
+      }
+      /**
+       * <code>bool right = 4;</code>
+       */
+      public Builder setRight(boolean value) {
+        
+        right_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool right = 4;</code>
+       */
+      public Builder clearRight() {
+        
+        right_ = false;
+        onChanged();
         return this;
       }
       @java.lang.Override
@@ -440,9 +697,10 @@ public final class A2RServoControl {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026A2R_ServoControl.proto\"\022\n\020A2R_ServoCon" +
-      "trolB\034\n\032com.sasa5680.ProtoMessagesb\006prot" +
-      "o3"
+      "\n\026A2R_ServoControl.proto\"I\n\020A2R_ServoCon" +
+      "trol\022\n\n\002up\030\001 \001(\010\022\014\n\004down\030\002 \001(\010\022\014\n\004left\030\003" +
+      " \001(\010\022\r\n\005right\030\004 \001(\010B\034\n\032com.sasa5680.Prot" +
+      "oMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -461,7 +719,7 @@ public final class A2RServoControl {
     internal_static_A2R_ServoControl_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_A2R_ServoControl_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "Up", "Down", "Left", "Right", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
