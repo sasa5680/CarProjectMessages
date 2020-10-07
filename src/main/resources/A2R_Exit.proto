@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.sasa5680.ProtoMessages";
+
+message A2R_Exit{
+
+	bool dummy = 1;
+	
+}
