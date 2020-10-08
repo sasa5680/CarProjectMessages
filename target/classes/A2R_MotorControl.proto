@@ -5,6 +5,6 @@ option java_package = "com.sasa5680.ProtoMessages";
 message A2R_Control{
 
 	int32 Power = 1;
-	float angle = 2;
+	int32 angle = 2;
 	
 }

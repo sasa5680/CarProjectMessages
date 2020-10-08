@@ -24,9 +24,9 @@ public final class A2RMotorControl {
     int getPower();
 
     /**
-     * <code>float angle = 2;</code>
+     * <code>int32 angle = 2;</code>
      */
-    float getAngle();
+    int getAngle();
   }
   /**
    * Protobuf type {@code A2R_Control}
@@ -42,7 +42,7 @@ public final class A2RMotorControl {
     }
     private A2R_Control() {
       power_ = 0;
-      angle_ = 0F;
+      angle_ = 0;
     }
 
     @java.lang.Override
@@ -74,9 +74,9 @@ public final class A2RMotorControl {
               power_ = input.readInt32();
               break;
             }
-            case 21: {
+            case 16: {
 
-              angle_ = input.readFloat();
+              angle_ = input.readInt32();
               break;
             }
             default: {
@@ -121,11 +121,11 @@ public final class A2RMotorControl {
     }
 
     public static final int ANGLE_FIELD_NUMBER = 2;
-    private float angle_;
+    private int angle_;
     /**
-     * <code>float angle = 2;</code>
+     * <code>int32 angle = 2;</code>
      */
-    public float getAngle() {
+    public int getAngle() {
       return angle_;
     }
 
@@ -146,8 +146,8 @@ public final class A2RMotorControl {
       if (power_ != 0) {
         output.writeInt32(1, power_);
       }
-      if (angle_ != 0F) {
-        output.writeFloat(2, angle_);
+      if (angle_ != 0) {
+        output.writeInt32(2, angle_);
       }
       unknownFields.writeTo(output);
     }
@@ -162,9 +162,9 @@ public final class A2RMotorControl {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, power_);
       }
-      if (angle_ != 0F) {
+      if (angle_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, angle_);
+          .computeInt32Size(2, angle_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -184,10 +184,8 @@ public final class A2RMotorControl {
       boolean result = true;
       result = result && (getPower()
           == other.getPower());
-      result = result && (
-          java.lang.Float.floatToIntBits(getAngle())
-          == java.lang.Float.floatToIntBits(
-              other.getAngle()));
+      result = result && (getAngle()
+          == other.getAngle());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -202,8 +200,7 @@ public final class A2RMotorControl {
       hash = (37 * hash) + POWER_FIELD_NUMBER;
       hash = (53 * hash) + getPower();
       hash = (37 * hash) + ANGLE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getAngle());
+      hash = (53 * hash) + getAngle();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -339,7 +336,7 @@ public final class A2RMotorControl {
         super.clear();
         power_ = 0;
 
-        angle_ = 0F;
+        angle_ = 0;
 
         return this;
       }
@@ -420,7 +417,7 @@ public final class A2RMotorControl {
         if (other.getPower() != 0) {
           setPower(other.getPower());
         }
-        if (other.getAngle() != 0F) {
+        if (other.getAngle() != 0) {
           setAngle(other.getAngle());
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -478,28 +475,28 @@ public final class A2RMotorControl {
         return this;
       }
 
-      private float angle_ ;
+      private int angle_ ;
       /**
-       * <code>float angle = 2;</code>
+       * <code>int32 angle = 2;</code>
        */
-      public float getAngle() {
+      public int getAngle() {
         return angle_;
       }
       /**
-       * <code>float angle = 2;</code>
+       * <code>int32 angle = 2;</code>
        */
-      public Builder setAngle(float value) {
+      public Builder setAngle(int value) {
         
         angle_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>float angle = 2;</code>
+       * <code>int32 angle = 2;</code>
        */
       public Builder clearAngle() {
         
-        angle_ = 0F;
+        angle_ = 0;
         onChanged();
         return this;
       }
@@ -571,7 +568,7 @@ public final class A2RMotorControl {
   static {
     java.lang.String[] descriptorData = {
       "\n\026A2R_MotorControl.proto\"+\n\013A2R_Control\022" +
-      "\r\n\005Power\030\001 \001(\005\022\r\n\005angle\030\002 \001(\002B\034\n\032com.sas" +
+      "\r\n\005Power\030\001 \001(\005\022\r\n\005angle\030\002 \001(\005B\034\n\032com.sas" +
       "a5680.ProtoMessagesb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
